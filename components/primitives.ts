@@ -35,7 +35,7 @@ export const title = tv({
 				"pink",
 				"foreground",
 			],
-			class: "bg-clip-text text-transparent bg-gradient-to-b",
+			class: "text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-green-500",
 		},
 	],
 });
@@ -47,7 +47,7 @@ export const subtitle = tv({
 			true: "!w-full",
 		},
 	},
-  defaultVariants:{
-    fullWidth: true
-  }
+	defaultVariants: {
+		fullWidth: true
+	}
 });

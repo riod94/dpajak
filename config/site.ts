@@ -1,69 +1,28 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "KPAJAK",
+	description: "KPAJAK adalah aplikasi kalkulator pajak online. Hitung pajak penghasilan pasal 21 dan pajak pertambahan nilai dengan mudah",
 	navItems: [
 		{
-			label: "Home",
+			label: "Pph21",
 			href: "/",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "PPN",
+			href: "/ppn",
 		},
+		// {
+		// 	label: "Blog",
+		// 	href: "/blog",
+		// },
 		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
+			label: "About",
+			href: "/about",
+		}
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
+		github: "https://github.com/riod94",
+		sponsor: "https://nusawork.com"
 	},
 };
