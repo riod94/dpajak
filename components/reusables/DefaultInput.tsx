@@ -104,15 +104,15 @@ function DefaultInput({
 			type={inputType}
 			variant={
 				variant || (type === "money" && !isReadOnly)
-					? variant || "bordered"
-					: variant || "flat"
+					? variant ?? "bordered"
+					: variant ?? "flat"
 			}
 			name={name}
 			label={label}
 			labelPlacement={
 				labelPlacement || type === "money"
-					? labelPlacement || "outside-left"
-					: labelPlacement || "inside"
+					? labelPlacement ?? "outside-left"
+					: labelPlacement ?? "inside"
 			}
 			placeholder={placeholder}
 			startContent={
@@ -122,7 +122,7 @@ function DefaultInput({
 					</div>
 				)
 			}
-			classNames={classNames || defaultClassNames}
+			classNames={classNames ?? defaultClassNames}
 			value={state}
 			defaultValue={defaultValue}
 			onChange={handleOnChange}

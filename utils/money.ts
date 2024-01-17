@@ -25,6 +25,7 @@ const convertToString = (value: number, symbol?: string): string => {
 
 const convertToNumeric = (value: string | undefined): number => {
     if (!value) return 0;
+    if (typeof value === 'number') return value;
     return parseInt(value.replace(/,.*|[^0-9]/g, ''), 10);
 };
 

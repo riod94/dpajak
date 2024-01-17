@@ -1,93 +1,3 @@
-export interface Pph21StateInterface {
-    personal: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-    earnings: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-    deductions: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-    result: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-}
-
-export interface PpnStateInterface {
-    settings: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-    components: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-    result: {
-        type: string;
-        name: string;
-        label: string;
-        value: string;
-        classNames: {
-            inputWrapper: string;
-        };
-        color?: string;
-        itemClassname?: string;
-        items?: any[];
-    }[];
-}
-
 const INITIAL_STATE = {
     PPH_21_STATE: {
         personal: [
@@ -276,7 +186,7 @@ const INITIAL_STATE = {
             {
                 type: "money",
                 name: "allowance",
-                label: "Tunjangan Lainnya",
+                label: "Tunjangan Lainnya, Uang Lembur dan Sebagainya",
                 value: "0",
                 classNames: {
                     input: "text-right",
@@ -287,7 +197,7 @@ const INITIAL_STATE = {
             {
                 type: "money",
                 name: "honorarium",
-                label: "Honorarium dan Imbalan Lainnya Sejenisnya",
+                label: "Honorarium dan Imbalan Lainnya",
                 value: "0",
                 classNames: {
                     input: "text-right",
@@ -331,7 +241,7 @@ const INITIAL_STATE = {
             {
                 isReadOnly: true,
                 type: "money",
-                name: "bruto",
+                name: "gross",
                 label: "Penghasilan Bruto",
                 value: "0",
                 classNames: {
@@ -493,6 +403,253 @@ const INITIAL_STATE = {
                 type: "money",
                 name: "pph21BeforePreviousYear",
                 label: "PPh Pasal 21 Dipotong Masa Sebelumnya",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+        ],
+    },
+    PPH_21_TER_STATE: {
+        personal: [
+            {
+                type: "text",
+                name: "name",
+                label: "Nama Karyawan",
+                value: "",
+                classNames: {
+                    inputWrapper: "bg-transparent p-[0.1rem]",
+                },
+            },
+            {
+                type: "button-group",
+                color: "success",
+                name: "npwp",
+                label: "NPWP",
+                value: "Ya",
+                itemClassname: "rounded-full py-0",
+                items: [
+                    {
+                        label: "Ya",
+                        value: "Ya",
+                        description: "",
+                    },
+                    {
+                        label: "Tidak",
+                        value: "Tidak",
+                        description: "",
+                    },
+                ],
+            },
+            {
+                type: "button-group",
+                color: "success",
+                name: "taxMethod",
+                label: "Tunjangan Pajak",
+                value: "GROSS",
+                itemClassname: "rounded-full py-0",
+                items: [
+                    {
+                        label: "Gross",
+                        value: "GROSS",
+                        description: "",
+                    },
+                    {
+                        label: "Gross Up",
+                        value: "GROSS UP",
+                        description: "",
+                    },
+                ],
+            },
+            {
+                type: "button-group",
+                color: "success",
+                name: "ptkpStatus",
+                label: "Status PTKP",
+                value: "TK/0",
+                itemClassname: "rounded-full py-0",
+                items: [
+                    {
+                        label: "TK/0",
+                        value: "TK/0",
+                        description: "",
+                    },
+                    {
+                        label: "TK/1",
+                        value: "TK/1",
+                        description: "",
+                    },
+                    {
+                        label: "TK/2",
+                        value: "TK/2",
+                        description: "",
+                    },
+                    {
+                        label: "TK/3",
+                        value: "TK/3",
+                        description: "",
+                    },
+                    {
+                        label: "K/0",
+                        value: "K/0",
+                        description: "",
+                    },
+                    {
+                        label: "K/1",
+                        value: "K/1",
+                        description: "",
+                    },
+                    {
+                        label: "K/2",
+                        value: "K/2",
+                        description: "",
+                    },
+                    {
+                        label: "K/3",
+                        value: "K/3",
+                        description: "",
+                    },
+                ],
+            },
+        ],
+        earnings: [
+            {
+                type: "money",
+                name: "salary",
+                label: "Gaji/Pensiun atau THT/JHT",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                type: "money",
+                name: "allowance",
+                label: "Tunjangan Lainnya, Uang Lembur dan Sebagainya",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                type: "money",
+                name: "honorarium",
+                label: "Honorarium dan Imbalan Lainnya",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                type: "money",
+                name: "premiAsuransi",
+                label: "Premi Asuransi yang dibayar Pemberi Kerja",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                type: "money",
+                name: "natura",
+                label: "Natura dan Kenikmatan Lainnya",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                type: "money",
+                name: "tantiem",
+                label: "Tantiem, Bonus, Gratifikasi, Jasa Produksi dan THR",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                isReadOnly: true,
+                type: "money",
+                name: "gross",
+                label: "Penghasilan Bruto",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-sm font-bold w-full",
+                },
+            },
+        ],
+        result: [
+            {
+                isReadOnly: true,
+                type: "string",
+                labelPlacement: "outside-left",
+                name: "terCategory",
+                label: "Kategori TER",
+                value: "",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                isReadOnly: true,
+                type: "money",
+                name: "terStartRange",
+                label: "Penghasilan Bruto Mulai",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                isReadOnly: true,
+                type: "money",
+                name: "terEndRange",
+                label: "Penghasilan Bruto Sampai",
+                value: "0",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                isReadOnly: true,
+                type: "string",
+                labelPlacement: "outside-left",
+                name: "terRate",
+                label: "Tarif Efektif Rata-rata (TER) Bulanan",
+                value: "0%",
+                classNames: {
+                    input: "text-right",
+                    mainWrapper: "w-full",
+                    label: "text-xs w-full",
+                },
+            },
+            {
+                isReadOnly: true,
+                type: "money",
+                name: "pph21Monthly",
+                label: "PPh 21 Terutang bulan ini",
                 value: "0",
                 classNames: {
                     input: "text-right",

@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
+import { Button } from "@nextui-org/button";
 import { subtitle, title } from "@/components/primitives";
 import DefaultInput from "@/components/reusables/DefaultInput";
 import ButtonRadioGroup from "@/components/reusables/ButtonRadioGroup";
-import { INITIAL_STATE, PpnStateInterface } from "@/config/constants";
-import { Button } from "@nextui-org/button";
-import { Money } from "@/utils";
 import DefaultAccordion from "@/components/reusables/DefaultAccordion";
+import { INITIAL_STATE } from "@/config/constants";
+import { PpnStateInterface } from "@/config/interfaces";
+import { Money } from "@/utils";
 
 export default function PpnPage() {
 	const [state, setState] = React.useState(INITIAL_STATE.PPN_STATE);
