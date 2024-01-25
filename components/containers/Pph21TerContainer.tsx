@@ -82,12 +82,21 @@ function Pph21TerContaner() {
 
 		const rate: { from: number; until: number; rate: number } = rates?.find(
 			(item: { from: number; until: number; rate: number }) =>
-				gross > item.from && gross <= item.until
+				(gross > item.from && gross <= item.until) ||
+				(item.until == 0 && gross > item.from)
 		) ?? { from: 0, until: 0, rate: 0 };
 
-		const pph21Monthly: number = Math.round(gross * rate.rate);
-		const percent =
-			rate.rate * 100 > 1 ? (rate.rate * 100).toFixed(0) : rate.rate * 100;
+		let pph21Monthly: number = Math.round(gross * rate.rate);
+		const method = state.personal.find(
+			(item) => item.name === "taxMethod"
+		)?.value;
+
+		pph21Monthly =
+			method === "GROSS"
+				? pph21Monthly
+				: Math.round((gross + pph21Monthly) * rate.rate);
+
+		const percent = (rate.rate * 100).toFixed(2);
 
 		setState((prev) => {
 			return {
