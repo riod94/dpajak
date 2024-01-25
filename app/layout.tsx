@@ -10,7 +10,7 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
 	title: {
-		default: siteConfig.name,
+		default: `PPh21 TER - ${siteConfig.name}`,
 		template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
