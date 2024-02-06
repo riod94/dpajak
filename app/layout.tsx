@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 		shortcut: "/favicon-16x16.png",
 		apple: "/apple-touch-icon.png",
 	},
+	robots: "all",
 };
 
 export const viewport: Viewport = {
@@ -44,7 +45,7 @@ export default function RootLayout({
 				)}
 			>
 				<Providers
-					themeProps={{ attribute: "class", defaultTheme: "dark" }}
+					themeProps={{ attribute: "class", defaultTheme: "light" }}
 				>
 					<div className="relative flex flex-col h-screen">
 						<Navbar />

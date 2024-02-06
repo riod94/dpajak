@@ -5,60 +5,12 @@ import { subtitle, title } from "@/components/primitives";
 import DefaultInput from "@/components/reusables/DefaultInput";
 import ButtonRadioGroup from "@/components/reusables/ButtonRadioGroup";
 import DefaultAccordion from "@/components/reusables/DefaultAccordion";
-import { INITIAL_STATE } from "@/config/constants";
+import { FAQ, INITIAL_STATE } from "@/config/constants";
 import { PpnStateInterface } from "@/config/interfaces";
 import { Money } from "@/utils";
 
 export default function PpnPage() {
 	const [state, setState] = React.useState(INITIAL_STATE.PPN_STATE);
-
-	const faq = [
-		{
-			key: "1",
-			title: "Nama Barang / Jasa",
-			content: "Kolom ini diisi dengan nama barang atau jasa.",
-		},
-		{
-			key: "2",
-			title: "Harga Total Include/Exclude PPN",
-			content:
-				"Kolom ini untuk menentukan apakah hasil perhitungan dari harga total sudah termasuk PPN atau belum.",
-		},
-		{
-			key: "3",
-			title: "Harga Satuan",
-			content: "Kolom ini diisi dengan harga satuan dari barang atau jasa.",
-		},
-		{
-			key: "4",
-			title: "Quantity",
-			content: "Kolom ini diisi dengan jumlah dari barang atau jasa.",
-		},
-		{
-			key: "5",
-			title: "Discount",
-			content:
-				"Kolom ini diisi dengan total jumlah diskon yang diberikan dalam penyerahan barang atau jasa.",
-		},
-		{
-			key: "6",
-			title: "DPP",
-			content:
-				"Dasar Pengenaan Pajak atau DPP merupakan harga jual, penggantian, atau nilai yang dipakai sebagai dasar dari penghitungan besarnya pajak. Kolom ini merupakan hasil pengurangan dari kolom Harga Total dengan Discount. Dimana jika kolom Include/Exclude PPN bernilai YA, kolom ini akan menjadi DPP. Jika kolom Include/Exclude PPN bernilai TIDAK, kolom ini akan menjadi Harga Total.",
-		},
-		{
-			key: "7",
-			title: "PPN",
-			content:
-				"Kolom ini merupakan hasil penghitungan PPN terutang dari kolom DPP",
-		},
-		{
-			key: "8",
-			title: "Harga Total",
-			content:
-				"Kolom ini merupakan hasil penjumlahan dari kolom DPP dan kolom PPN.",
-		},
-	];
 
 	const handleStateChange = (
 		groupKey: keyof typeof INITIAL_STATE.PPN_STATE,
@@ -80,9 +32,7 @@ export default function PpnPage() {
 					const value =
 						item.name == "type"
 							? "Tidak"
-							: item.type === "money"
-							? "0"
-							: "";
+							: (item.type === "money" ? "0": "");
 					resetState[groupKey as keyof PpnStateInterface][index].value =
 						value;
 				}
@@ -223,7 +173,7 @@ export default function PpnPage() {
 			</div>
 			<div className="container m-auto flex flex-col justify-center gap-6 mb-4 mt-8">
 				<p className="font-bold">FAQ</p>
-				<DefaultAccordion items={faq} />
+				<DefaultAccordion items={FAQ.PPN} />
 			</div>
 		</div>
 	);
