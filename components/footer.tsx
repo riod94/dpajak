@@ -15,7 +15,7 @@ export default function Footer() {
 				title="nextui.org homepage"
 			>
 				<span className="text-default-600">&copy; {year}</span>
-				<p className="text-primary">KPAJAK</p>
+				<p className="text-primary">DPAJAK</p>
 			</Link>
 		</footer>
 	);

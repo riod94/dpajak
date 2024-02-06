@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "About",
 	description: siteConfig.description,
-	keywords: `${siteConfig.keywords}, about, tentang kami, tentang kpajak`,
+	keywords: `${siteConfig.keywords}, about, tentang kami, tentang dpajak`,
 };
 
 export default function AboutLayout({

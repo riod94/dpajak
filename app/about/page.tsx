@@ -8,16 +8,16 @@ export default function AboutPage() {
 			</div>
 			<div className="container m-auto gap-6 grid grid-cols-1">
 				<p>
-					KPAJAK merupakan kalkulator perhitungan pajak yang sederhana dan
+					DPAJAK merupakan kalkulator perhitungan pajak yang sederhana dan
 					mudah digunakan. Dengan antarmuka yang intuitif, Anda dapat
 					dengan menghitung Pajak Penghasilan Pasal 21 (PPh21) dan Pajak
 					Pertambahan Nilai (PPN) dengan cepat dan mudah.
 				</p>
 				<p>
 					Jangan biarkan perhitungan PPh21 menjadi beban tambahan bagi
-					Anda. Dengan KPAJAK, Anda dapat membuat simulasi perhitungan
+					Anda. Dengan DPAJAK, Anda dapat membuat simulasi perhitungan
 					pajak dengan efisien, akurat dan selalu terbaru sesuai dengan
-					undang-undang yang berlaku. Untuk kedepannya KPAJAK akan terus
+					undang-undang yang berlaku. Untuk kedepannya DPAJAK akan terus
 					melakukan update perhitungan pajak lainnya!
 				</p>
 			</div>

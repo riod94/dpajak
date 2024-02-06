@@ -33,7 +33,7 @@ export const Navbar = () => {
 								"font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-green-500"
 							}
 						>
-							KPAJAK
+							DPAJAK
 						</p>
 					</Link>
 				</NavbarBrand>
