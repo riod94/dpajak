@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { title, subtitle } from "@/components/primitives";
 import Pph21TerContaner from "@/components/containers/Pph21TerContainer";

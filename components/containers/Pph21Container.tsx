@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button, Divider } from "@nextui-org/react";
 import DefaultInput from "../reusables/DefaultInput";
@@ -5,7 +6,7 @@ import ButtonRadioGroup from "../reusables/ButtonRadioGroup";
 import { INITIAL_STATE } from "@/config/constants";
 import { Pph21StateInterface } from "@/config/interfaces";
 
-function Pph21Contaner() {
+function Pph21Container() {
 	const [state, setState] = React.useState(INITIAL_STATE.PPH_21_STATE);
 
 	const handleStateChange = (
@@ -146,4 +147,4 @@ function Pph21Contaner() {
 	);
 }
 
-export default Pph21Contaner;
+export default Pph21Container;

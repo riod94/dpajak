@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DefaultInput from "../reusables/DefaultInput";
 import ButtonRadioGroup from "../reusables/ButtonRadioGroup";
@@ -10,7 +11,7 @@ import {
 import { Pph21TerStateInterface } from "@/config/interfaces";
 import { Money, calculateSum } from "@/utils";
 
-function Pph21TerContaner() {
+function Pph21TerContainer() {
 	const [state, setState] = React.useState(INITIAL_STATE.PPH_21_TER_STATE);
 
 	const handleStateChange = (
@@ -217,4 +218,4 @@ function Pph21TerContaner() {
 	);
 }
 
-export default Pph21TerContaner;
+export default Pph21TerContainer;
