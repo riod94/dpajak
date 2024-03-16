@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from "react";
 import DefaultInput from "../reusables/DefaultInput";
 import ButtonRadioGroup from "../reusables/ButtonRadioGroup";

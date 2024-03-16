@@ -19,7 +19,7 @@ import { GithubIcon, HeartFilledIcon } from "@/components/icons";
 import { Logo } from "@/components/icons";
 import { usePathname } from "next/navigation";
 
-export const Navbar = () => {
+const Navbar = () => {
 	const pathname = usePathname();
 
 	return (
@@ -116,3 +116,5 @@ export const Navbar = () => {
 		</NextUINavbar>
 	);
 };
+
+export default Navbar;
