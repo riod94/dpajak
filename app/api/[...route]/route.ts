@@ -1,13 +1,8 @@
 import { Hono } from 'hono'
 import { showRoutes } from 'hono/dev'
 import { handle } from 'hono/vercel'
-import type { PageConfig } from 'next'
 
-export const config: PageConfig = {
-  api: {
-    bodyParser: false,
-  },
-}
+export const runtime = 'nodejs'
 
 const app = new Hono({ strict: false }).basePath('api')
 
