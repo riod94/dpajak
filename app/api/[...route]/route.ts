@@ -2,8 +2,6 @@ import { Hono } from 'hono'
 import { showRoutes } from 'hono/dev'
 import { handle } from 'hono/vercel'
 
-export const runtime = 'nodejs'
-
 const app = new Hono({ strict: false }).basePath('api')
 
 app.get('/hello', (c) => {
