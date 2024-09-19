@@ -6,7 +6,7 @@ const app = new Hono({ strict: false }).basePath('api')
 
 app.get('/hello', (c) => {
   return c.json({
-    message: 'Hello from Hono!',
+    message: 'Hi next from Hono!',
   })
 })
 
