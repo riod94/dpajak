@@ -1,6 +1,6 @@
 import React from "react";
 import { title, subtitle } from "@/components/primitives";
-import Pph21TerContaner from "@/components/containers/Pph21TerContainer";
+import Pph21TerContainer from "@/components/containers/Pph21TerContainer";
 
 export default function Home() {
 	return (
@@ -14,7 +14,7 @@ export default function Home() {
 				</h2>
 			</div>
 
-			<Pph21TerContaner />
+			<Pph21TerContainer />
 
 			<div className="container m-auto flex flex-col justify-center gap-6 my-4">
 				<p className="font-bold">Disclaimer</p>

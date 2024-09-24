@@ -46,13 +46,13 @@ export default function RootLayout({
 				<Providers
 					themeProps={{ attribute: "class", defaultTheme: "light" }}
 				>
-					<div className="relative flex flex-col h-screen">
+					<main className="relative flex flex-col h-screen">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow">
+						<div className="container mx-auto max-w-7xl pt-8 px-6 flex-grow">
 							{children}
-						</main>
+						</div>
 						<Footer />
-					</div>
+					</main>
 				</Providers>
 			</body>
 		</html>
